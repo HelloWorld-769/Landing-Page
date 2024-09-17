@@ -1,0 +1,7 @@
+@import "../../styles/_colors";
+
+.auto-typing-text {
+  background: $text-gradient;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

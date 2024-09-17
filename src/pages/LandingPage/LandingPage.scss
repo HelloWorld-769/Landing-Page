@@ -1,0 +1,45 @@
+@import "../../styles/_colors";
+
+.header {
+  margin-top: 4rem;
+  color: $white;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  h6 {
+    background: $text-gradient;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  margin-top: 10%;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .card-container:first-child {
+    &:hover {
+      transform: perspective(1000px) rotateX(15deg) rotateY(-15deg) rotate(5deg);
+    }
+  }
+  .card-container:nth-child(2) {
+    &:hover {
+      transform: perspective(1000px) rotateX(15deg);
+    }
+  }
+  .card-container:nth-child(3) {
+    &:hover {
+      transform: perspective(1000px) rotateX(15deg) rotateY(15deg) rotate(-5deg);
+    }
+  }
+}
